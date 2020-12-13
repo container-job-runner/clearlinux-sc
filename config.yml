@@ -1,5 +1,5 @@
 build:
-  image: buvoli/clearlinux-sc:v0.2.0
+  image: cjrun/clearlinux-sc:v0.1.0
 environment:
   JULIA_DEPOT_PATH: "/opt/shared/julia-depot" # used in place of ~/.julia
   DYNAMIC_USER: "user"
@@ -13,9 +13,6 @@ mounts:
   - type: "bind"
     hostPath: "config/theia"
     containerPath: "/home/user/.theia"
-  - type: "bind"
-    hostPath: "config/cjr"
-    containerPath: "/home/user/.config/cjr"
 files:
   containerRoot: "/home/user"
 flags:
